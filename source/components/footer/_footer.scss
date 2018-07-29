@@ -1,0 +1,120 @@
+footer {
+  background-color: #273a43;
+  padding: 66px 0;
+  color: #c4c4c4;
+}
+.footer-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-item {
+  width: 230px;
+  @include for-small-desktop {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  @include for-phone {
+    width: 300px;    
+  }
+  @include for-small-phone {
+    width: 200px;    
+  }
+  &:first-child .footer-item__title {
+    font-family: "Pacifico";
+    text-transform: none;
+  }
+  p {
+    line-height: 180%;
+    font-size: 14px;
+  }
+  li {
+    a {
+      color: white;
+      align-items: center;
+      display: flex;
+    }
+    i {
+      padding: 10px 20px 10px 0;
+      font-size: 26px;
+      color: $acsent;
+    }
+  }
+  .tweets {
+    i {
+      align-self: flex-start;
+      padding: 0 10px 0 0;
+    }
+    p {
+      color: #c4c4c4;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+    span {
+      color: $acsent;
+    }
+  }
+  form {
+    margin-top: 20px;
+    input {
+      padding: 10px;
+      background-color: #172227;
+      border: none;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      color: white;
+      font-size: 13px;
+      &::placeholder {
+        color: #a7a7a7;
+      }
+    }
+    button {
+      position: absolute;
+      background-color: $acsent;
+      color: white;
+      border: none;
+      padding: 11px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+}
+.footer-item__title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-family: $mainFont;
+}
+.copyright {
+  background-color: #172227;
+  color: #a7a7a7;
+  padding: 32px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    margin-left: 15px;
+  }
+  a {
+    width: 34px;
+    height: 34px;
+    color: white;
+    background-color: #2c3b42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      background-color: $acsent;
+    }
+  }
+}

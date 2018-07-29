@@ -1,0 +1,36 @@
+@import "./_reset.scss";
+@import "./_fonts.scss";
+@import "./_vars.scss";
+body {
+  margin: 0;
+  font-family: $mainFont;
+  color: $textColor;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  @include for-desktop {
+    max-width: $smDesktopWidth;
+  }
+  @include for-small-desktop {
+    max-width: $tabletWidth;
+  }
+  @include for-tablet {
+    max-width: $phoneWidth;
+  }
+  @include for-phone {
+    max-width: $smPhoneWidth;
+  }
+  @include for-small-phone {
+    max-width: 300px;
+  }
+}
+
+@import "../components/header/_header.scss";
+@import "../components/footer/_footer.scss";
+
+@import '../pages/index/index.scss';

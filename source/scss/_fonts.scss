@@ -1,0 +1,12 @@
+//fonts
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("../assets/fonts/OpenSans-Regular.ttf");
+};
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../assets/fonts/OpenSans-SemiBold.ttf");
+};
+
+$mainFont: "OpenSans-Regular";
+$boldFont: "OpenSans-Semibold";

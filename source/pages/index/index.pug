@@ -1,0 +1,104 @@
+extends ../base
+block title
+	| Index page
+block main
+	//- img(src=require("./webpack.svg") width="1000" height="200")
+	include ../../components/header/header.pug
+	.container
+		section(id="description")
+			p(class="text") Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book!!
+			div(class="suggest-items")
+				a.suggest-item(href="#")
+					.suggest-item__icon
+						i(class="la la-camera")
+					.suggest-item__picture
+					.suggest-item__text
+						.suggest-item__text-title What we are
+						.suggest-item__text-common Lorem Ipsum is simply dummy text the printing and typesetting.
+				a.suggest-item(href="#")
+					.suggest-item__icon
+						i(class="la la-edit")
+					.suggest-item__picture
+					.suggest-item__text
+						.suggest-item__text-title Start your project
+						.suggest-item__text-common Lorem Ipsum is simply dummy text the printing and typesetting.
+				a.suggest-item(href="#")
+					.suggest-item__icon
+						i(class="la la-shopping-cart")
+					.suggest-item__picture
+					.suggest-item__text
+						.suggest-item__text-title Our team
+						.suggest-item__text-common Lorem Ipsum is simply dummy text the printing and typesetting.
+
+		section(id="features")
+			.section-header
+				.section-header__icon
+					i(class="la la-check")
+				h1.section-header__title Our 
+					span features
+			.features-content
+				.features-content__item
+					.features-content__item-picture
+						img(src="/source/assets/images/iphone&ipad.png"  width="100%")
+					.features-content__item-text
+						h1 Lorem Ipsum is simply !!
+						p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. On the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
+						a(href='#') Read more
+
+				.features-content__item
+					.features-content__item-picture
+						img(src="/source/assets/images/camera.png" width="100%")
+					.features-content__item-text
+						h1 A flat camera
+						p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators.
+						a(href='#') Read more
+		
+		section(id="projects")
+			.section-header
+				.section-header__icon(style="background-color: white;")
+					img(src="source/assets/images/cup.png")
+				h1.section-header__title Our latest 
+					span projects
+				p Lorem Ipsum is simply dummy text the printing and typesetting.
+			.projects-items
+				a.project-item(href="#")
+					.project-item__picture
+						img(src="source/assets/images/photography.png")
+					.project-item__text
+						h1 Lorem Ipsum
+						h3 Photography
+				a.project-item(href="#")
+					.project-item__picture
+						img(src="source/assets/images/print.png")
+					.project-item__text
+						h1 Bonorum et Malorum
+						h3 Print Designing
+				a.project-item(href="#")
+					.project-item__picture
+						img(src="source/assets/images/e-marketing.png")
+					.project-item__text
+						h1 Injected humour
+						h3 E-marketing
+				a.project-item(href="#")
+					.project-item__picture
+						img(src="source/assets/images/marketing.png" height="100%")
+					.project-item__text
+						h1 Embarrassing
+						h3 Best Marketplace
+		section(id="testimonials")
+			.section-header
+				.section-header__icon(style="background-color: white;")
+					img(src="source/assets/images/bubble.png")
+				h1.section-header__title Client 
+					span testimonials	
+			p.testimonial Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book !!
+			img(src="source/assets/images/shape.png", alt="")
+			.row
+				span.author Robart Markel, 
+				span.company Company Name
+			ul.dots
+				li.testimonial-dot
+				li.testimonial-dot
+				li.testimonial-dot
+
+	include ../../components/footer/footer.pug

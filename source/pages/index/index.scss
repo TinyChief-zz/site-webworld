@@ -1,0 +1,298 @@
+// @import "../../components/header/_header.scss";
+// @import "../../components/footer/_footer.scss";
+
+#description {
+  padding: 80px 0;
+  @include for-small-desktop {
+    padding: 50px 0;
+  }
+  p.text {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .suggest-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include for-small-desktop {
+      justify-content: center;
+    }
+  }
+  .suggest-item {
+    width: 320px;
+    height: 250px;
+    position: relative;
+    border: 1px solid #7472701c;
+    border-radius: 5px;
+    color: $textColor;
+    @include for-desktop {
+      width: 280px;
+    }
+    @include for-small-desktop {
+      width: 320px;
+      margin-bottom: 60px;
+    }
+    &__picture {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      height: 50%;
+    }
+    &__icon {
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      background-color: $acsent;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      color: white;
+    }
+    &__text {
+      padding-top: 25px;
+      text-align: center;
+      @include for-desktop {
+        padding-top: 15px;
+      }
+      * {
+        margin: 0 auto;
+        max-width: 80%;
+      }
+      &-title {
+        font-size: 20px;
+        font-family: $boldFont;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @for $i from 1 through 3 {
+    .suggest-item:nth-child(#{$i}) .suggest-item__picture {
+      background: url('../assets/images/description-item#{$i}.png') center bottom no-repeat
+    }
+  }
+}
+
+.section-header {
+  position: relative;
+  z-index: 0;
+  margin-bottom: 50px;
+  &__icon {
+    background-color: $acsent;
+    color: white;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    border: 8px solid white;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #7472701c;
+    top: 24px;
+    z-index: -1;
+    left: 0;
+  }
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    color: $darkTextColor;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+    span {
+      font-family: $boldFont;
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.features-content__item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  @include for-small-desktop {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  &:first-child::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #7472701c;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    @include for-small-desktop {
+      display: none;
+    }
+  }
+  &:nth-child(2n) .features-content__item-picture {
+    order: 2;
+    @include for-small-desktop {
+      order: 0;
+    }
+  }
+  &-picture {
+    width: 300px;
+    @include for-small-desktop {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  &-text {
+    width: 65%;
+    @include for-small-desktop {
+      width: 90%;
+    }
+  }
+  h1 {
+    color: $darkTextColor;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 180%;
+    margin-bottom: 25px;
+  }
+  a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 2px solid $acsent;
+    font-size: 13.5px;
+    text-transform: uppercase;
+    font-family: $boldFont;
+    color: $acsent;
+  }
+}
+#projects {
+  margin-bottom: 40px;
+}
+.projects-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include for-desktop {
+    justify-content: space-around;
+    width: 700px;
+    margin: 0 auto;
+  }
+  @include for-small-desktop {
+    width: auto;
+
+  }
+  .project-item {
+    color: $textColor;
+    @include for-small-desktop {
+      width: 45%;
+    }
+    &__picture {
+      position: relative;
+      display: flex;
+      border-radius: 5px;
+      overflow: hidden;
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        // display: none;
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+      }
+      &::after {
+        content: url('../assets/images/search.png');
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: 0.2s all ease-in-out;
+      }
+      &:hover:after, &:hover::before {
+        display: block;
+        opacity: 1;
+      }
+    }
+    &__text {
+      text-align: center;
+      padding: 15px 0;
+    }
+    h1 {
+      font-family: $boldFont;
+      color: $darkTextColor;
+      letter-spacing: -1px;
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#testimonials {
+  text-align: center;
+  color: $darkTextColor;
+  margin-bottom: 40px;
+  p.testimonial {
+    opacity: 1;
+    margin-bottom: 35px;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 150%;
+    transition: .2s all ease-in-out
+  }
+  .transition {
+    opacity: 0 !important;
+  }
+  img {
+    margin-bottom: 25px;
+  }
+  .row {
+    margin-bottom: 20px;
+  }
+  .author {
+    font-family: $boldFont;
+    transition: .2s all ease-in-out
+  }
+  .company {
+    font-family: $mainFont;
+    transition: .2s all ease-in-out
+  }
+  ul {
+    display: inline-flex;
+    margin: 0 auto;
+    li {
+      width: 10px;
+      height: 10px;
+      background-color: #e1e1e1;
+      border-radius: 50%;
+      transition: 0.4s all ease-in-out;
+      margin: 0 10px;
+    }
+    .active {
+      background-color: $acsent;
+    }
+  }
+}

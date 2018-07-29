@@ -1,0 +1,182 @@
+header {
+  height: 560px;
+  @include for-small-desktop {
+    height: 500px;
+  }
+  @include for-tablet {
+    height: 450px;
+  }
+  background: url('../assets/images/header-bg.png') center no-repeat;
+  color: #ffffff;
+  ul {
+    display: flex;
+    @include for-tablet {
+      display: none;
+    }
+    li {
+      margin-left: 20px;
+      @include for-small-desktop {
+        margin-left: 10px;
+      }
+    }
+    a {
+      padding: 10px;
+      color: #ffffff;
+      font-size: 15px;
+    }
+  }
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba($color: #ffffff, $alpha: .3);
+  }
+}
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: normal;
+  margin: 32px 0;
+}
+
+.header-content {
+  position: relative;
+}
+.slider {
+  height: 370px;
+  position: relative;
+  @include for-small-desktop {
+    height: 300px;
+  }
+  @include for-tablet {
+    height: 250px;
+  }
+}
+.slick-list, .slick-track {
+  height: 100%;
+}
+.slick-list {
+  margin-bottom: 20px !important;
+  @include for-tablet {
+    margin-bottom: 40px !important;
+  }
+}
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  cursor: pointer;
+}
+.slick-prev {
+  left: -40px;
+  @include for-desktop {
+    left: 0px;    
+  }
+  @include for-small-desktop {
+    left: -40px;
+  }
+}
+.slick-next {
+  right: -40px;
+  @include for-desktop {
+    right: 0px;
+  }
+  @include for-small-desktop {
+    right: -40px;
+  }
+}
+.slider-item__content {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  .text {
+    width: 100%;
+  }
+  h1 {
+    font-size: 48px;
+    font-family: $boldFont;
+    @include for-small-desktop {
+      font-size: 40px;
+    }
+    @include for-tablet {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    font-size: 25px;
+    @include for-small-desktop {
+      font-size: 20px;
+    }
+    @include for-tablet {
+      font-size: 16px;
+    }
+  }
+  .btn {
+    color: #ffffff;
+    position: absolute;
+    background-color: $acsent;
+    padding: 16px 18px;
+    font-size: 17px;
+    font-family: 'OpenSans-Bold', $boldFont, sans-serif;
+    text-transform: uppercase;
+    border-radius: 12px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include for-tablet {
+      padding: 10px 14px;
+      font-size: 16px;
+    }
+  }
+}
+ul.slick-dots {
+  display: flex;
+  justify-content: center;
+  li:first-child {
+    margin: 0;
+  }
+  li.slick-active button {
+    border: 1px solid #ffffff;
+  }
+  button {
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border: 1px solid transparent;
+    &::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+  }
+}
